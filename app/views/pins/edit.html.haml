@@ -3,6 +3,7 @@
 		.panel-heading
 			%h1.text-center Edit Pin
 		.panel-body	
+			= image_tag @pin.image.url(:thumb)
 			= render 'form'
 		.panel-footer	
 			= link_to "Cancel", @pin, class: "btn btn-default"
