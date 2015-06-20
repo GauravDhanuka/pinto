@@ -1,6 +1,9 @@
-%h1 Edit Pin
-
-=  render 'form'
-
-= link_to "Cancel", @pin
+.col-md-6.col-md-offset-3
+	.panel.panel-default
+		.panel-heading
+			%h1.text-center Edit Pin
+		.panel-body	
+			= render 'form'
+		.panel-footer	
+			= link_to "Cancel", @pin, class: "btn btn-default"
 

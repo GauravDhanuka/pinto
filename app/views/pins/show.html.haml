@@ -7,8 +7,10 @@
 	= @pin.user.email
 
 %br/	
-= link_to "Back", root_path
-
-= link_to "Edit", edit_pin_path
-
-= link_to "Delete", @pin,  method: :delete, data: { confirm: "Are you sure?" }
+.button-group
+	.btn.btn-default
+		= link_to "Back", root_path
+	.btn.btn-default	
+		= link_to "Edit", edit_pin_path
+	.btn.btn-default	
+		= link_to "Delete", @pin,  method: :delete, data: { confirm: "Are you sure?" }
