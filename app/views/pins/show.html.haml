@@ -18,7 +18,10 @@
 				%p.description= @pin.description
 				%p.user
 				Submitted by 
-				= @pin.user.email
+				- if @pin.user.name? 
+					= @pin.user.name
+				-else
+					= @pin.user.email	
 			.panel-footer
 				.row
 					.h3
