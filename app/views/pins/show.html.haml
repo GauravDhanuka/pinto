@@ -4,17 +4,37 @@
 			.panel-heading.pin_image
 				= image_tag @pin.image.url
 			.panel-body
-				%h1= @pin.title
-
-				%p.description= @pin.description
-			.panel-footer
 				.row
-					.col-md-6		
-						%p.user
-						Submitted by 
-						= @pin.user.email
+					.col-md-6
+						%h1= @pin.title
 					.col-md-6
 						.button-group.pull-right
-							= link_to "Back", root_path, class: "btn btn-default"
-							= link_to "Edit", edit_pin_path, class: "btn btn-default"
-							= link_to "Delete", @pin,  method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+							= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do
+								%span.glyphicon.glyphicon-heart
+									= @pin.get_upvotes.size
+							- if user_signed_in? && current_user == @pin.user		
+								= link_to "Edit", edit_pin_path, class: "btn btn-default"
+								= link_to "Delete", @pin,  method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+				%p.description= @pin.description
+				%p.user
+				Submitted by 
+				= @pin.user.email
+			.panel-footer
+				.row
+					.h3
+						.comments_title
+							= @pin.comments.count 
+							Comments
+				.row			
+					#comments
+						= render :partial => @pin.comments		
+
+					- if user_signed_in?								
+						= simple_form_for [@pin, Comment.new] do |f|
+							
+							.form-group
+								= f.input :body, input_html: { class: "form-control"}
+								%br/
+									
+							= f.submit "Add Comment", class: "btn btn-primary"	
+												

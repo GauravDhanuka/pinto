@@ -22,6 +22,7 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.5.1'
 gem 'paperclip', '~> 4.3.0'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # gem 'bcrypt', '~> 3.1.7'
