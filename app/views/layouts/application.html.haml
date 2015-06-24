@@ -2,26 +2,47 @@
 
 %html
 %head
-	%title Pinto
+	%title PinTO
 	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 %body
-	%nav.navbar.navbar-default
-		.container
-			.navbar-brand= link_to "PinTO", root_path
-			- if user_signed_in?
-				%ul.nav.navbar-nav.navbar-right
-					%li= link_to "New Pin", new_pin_path
-					%li= link_to "Account", edit_user_registration_path
-					%li= link_to "Sign Out", destroy_user_session_path, method: :delete
-			- else
-				%ul.nav.navbar-nav.navbar-right
-					%li= link_to "Sign Up", new_user_registration_path
-					%li= link_to "Sign In", new_user_session_path
-	.container					
-		- flash.each do |name, msg|
-			= content_tag :div, msg, class: "alert alert-info"
+	%nav.navbar-inverse
+		.container-fluid
+			.navbar-header
+				%button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+					%span.sr-only Toggle navigation
+					%span.icon-bar
+					%span.icon-bar
+					%span.icon-bar
+				.navbar-brand= link_to "-TO", root_path, class: "glyphicon glyphicon-pushpin"
+			#bs-example-navbar-collapse-1.collapse.navbar-collapse	
+				%ul.nav.navbar-nav
+					%li= link_to "Home", root_path
+					%li= link_to "About", root_path
+					%li= link_to "Contact", root_path
+
+				%form.navbar-form.navbar-left{:role => "search"}
+					.form-group
+						%input.form-control{:placeholder => "Search Pin", :type => "text"}
+					%button.btn.btn-default{:type => "submit", class: "glyphicon glyphicon-search"} 
+					
+
+				- if user_signed_in?
+					%ul.nav.navbar-nav.navbar-right
+						%li= link_to "New Pin", new_pin_path
+						%li= link_to "Account", edit_user_registration_path
+						%li= link_to " SignOut", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out"
+				- else
+					%ul.nav.navbar-nav.navbar-right
+						%li= link_to " SignUp", new_user_registration_path, class: "glyphicon glyphicon-user"
+						%li= link_to " Login", new_user_session_path, class: "glyphicon glyphicon-log-in"
+			/ /.navbar-collapse
+	/ /.container-fluid				
+	.container	
+		#notice-wrapper				
+			- flash.each do |name, msg|
+				= content_tag :div, msg, class: "alert alert-info"
 			
 		= yield
 

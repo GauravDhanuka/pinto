@@ -26,21 +26,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav {
+	margin-bottom: 20px;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	.navbar-brand {
 		a {
+			border: 1px solid #BD1E23; 
+			padding: 5px;
 			color: #BD1E23;
 			font-weight: bold;
+			margin-right: 80px;
+			margin-bottom: 15px;
+			margin-top: -5px;
 			&:hover {
 				text-decoration: none;
+				text-transform: uppercase;
 			}
 		}
 	}
+
+	
 }
 
 #pins {
   margin: 0 auto;
-  width: 100%;
+  
   .box {
 	  margin: 10px;
 	  width: 350px;
@@ -48,8 +57,11 @@ nav {
 	  border-radius: 7px;
 	  text-align: center;
 	  img {
+	  	margin-top: 0px;
 	  	max-width: 100%;
 	  	height: auto;
+	  	width: 100%;
+	  	border-radius: 7px;
 	  }
 	  h2 {
 	  	font-size: 22px;
@@ -85,8 +97,10 @@ nav {
 		img {
 			max-width: 100%;
 			width: 100%;
+			max-height: 75%;
 			display: block;
 			margin: 0 auto;
+			
 		}
 	}
 	.panel-body {
@@ -115,30 +129,33 @@ textarea {
 	min-height: 250px;
 }
 
-#main_content {
-	#content {
-		float: none;
-	}
-	padding-bottom: 100px;
-	.pin {
-		padding: 2em 1em;
-		border-bottom: 1px solid #e9e9e9;
-		.title {
-			a {
-				color: #FF4500;
-			}
+
+
+.comments_title {
+	margin-top: 2em;
+}
+#comments {
+	.comment {
+		padding: 1em 0;
+		border-top: 1px solid #E9E9E9;
+		.lead {
+			margin-bottom: 0;
 		}
 	}
-	.comments_title {
-		margin-top: 2em;
-	}
-	#comments {
-		.comment {
-			padding: 1em 0;
-			border-top: 1px solid #E9E9E9;
-			.lead {
-				margin-bottom: 0;
-			}
-		}
-	}
+}
+
+#notice-wrapper {
+	
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background: rgba(135, 216, 211, 0.085);
+	text-align: center;
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: black;
+	letter-spacing: 1px;
+		
 }
