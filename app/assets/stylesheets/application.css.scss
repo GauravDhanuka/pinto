@@ -18,7 +18,7 @@
 @import "bootstrap";
 
 body {
-	background: #E9E9E9;
+	background: rgba(0,0,0,0.9);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 nav {
 	margin-bottom: 20px;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0);
 	.navbar-brand {
 		a {
 			border: 1px solid #BD1E23; 
@@ -42,6 +42,10 @@ nav {
 				text-transform: uppercase;
 			}
 		}
+	}
+
+	p {
+		margin: auto;
 	}
 
 	
@@ -97,7 +101,7 @@ nav {
 		img {
 			max-width: 100%;
 			width: 100%;
-			max-height: 75%;
+			max-height: 100%;
 			display: block;
 			margin: 0 auto;
 			
@@ -158,4 +162,22 @@ textarea {
 	color: black;
 	letter-spacing: 1px;
 		
+}
+
+.jumbotron {
+	background: rgba(0,0,0,0);
+	letter-spacing: 2px;
+	
+	h1 {
+		color: #BD1E23;
+	}
+
+	p {
+		color: #fff;
+		strong{
+			color: #BD1E23; 
+
+		}
+	}
+
 }

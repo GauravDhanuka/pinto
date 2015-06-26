@@ -1,5 +1,7 @@
 class Pin < ActiveRecord::Base
 
+	searchkick
+
 	acts_as_votable
 
 	belongs_to :user

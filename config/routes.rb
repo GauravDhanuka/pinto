@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   	member do
   		put "like", to: "pins#upvote"
   	end
+    collection do
+      get 'search'
+    end
   	resources :comments
   end	
   root 'pins#index'
+  
 end
