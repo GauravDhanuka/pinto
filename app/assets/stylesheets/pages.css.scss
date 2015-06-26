@@ -1,0 +1,42 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+	
+	margin-top: -20px;
+	height: 500px;
+	
+	background: url(image.png) center center;
+	background-size: cover;
+	
+
+	h1 {
+
+		padding-top: 150px;
+		padding-bottom: 30px;
+		text-align: center;
+		font-size: 72px;
+		font-weight: 700;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+
+		span {
+
+			deisplay: inline-block;
+			padding: 0.2em 0.5em;
+			border: #CCCC00  solid 10px; 
+		}
+	} 
+
+	.kicker {
+
+		text-align: center;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: white;
+
+	}
+}

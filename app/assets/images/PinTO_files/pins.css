@@ -1,0 +1,32 @@
+/* line 5, /home/pro_droid/ruby_apps/pinto/app/assets/stylesheets/pins.css.scss */
+header {
+  margin-top: -20px;
+  height: 450px;
+  background: url(image.png) center center;
+  background-size: cover;
+}
+/* line 14, /home/pro_droid/ruby_apps/pinto/app/assets/stylesheets/pins.css.scss */
+header h1 {
+  padding-top: 150px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 72px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* line 25, /home/pro_droid/ruby_apps/pinto/app/assets/stylesheets/pins.css.scss */
+header h1 span {
+  deisplay: inline-block;
+  padding: 0.2em 0.5em;
+  border: #CCCC00  solid 10px;
+}
+/* line 33, /home/pro_droid/ruby_apps/pinto/app/assets/stylesheets/pins.css.scss */
+header .kicker {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+}

@@ -1,22 +1,22 @@
-.container
-	- if !user_signed_in?
-		.jumbotron.text-center
-			%h1.text-center PinTO
-			%hr
-			%p 
-				Your
-				%strong
-					%em PINS
-				are your
-				%strong 
-					%em VISIONS.
+- if !user_signed_in?
+	%header.text-center
+		
+		%h1.other
+			%span PinTO
+		%p.subtext 
+			Your
+			%strong
+				%em PINS
+			are your
+			%strong 
+				%em VISIONS.
 
-			%p 
-				Show the world what you see and how you see it.
-				Express your thoughts to the world.
-			%p
-				So Sign-Up today and make your world as you want to see it.
-			= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-danger"	
+		%p.subtext 
+			Show the world what you see and how you see it.
+			Express your thoughts to the world.
+		%p.subtext
+			So Sign-Up today and make your world as you want to see it.
+		= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-danger"	
 	
 	
 #pins.transitions-enabled

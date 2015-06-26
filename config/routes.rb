@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   	resources :comments
   end	
   root 'pins#index'
+  get 'pages/about'
+  get 'pages/contact'
   
 end

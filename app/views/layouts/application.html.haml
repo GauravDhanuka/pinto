@@ -19,8 +19,8 @@
 			#bs-example-navbar-collapse-1.collapse.navbar-collapse	
 				%ul.nav.navbar-nav
 					%li= link_to "Home", root_path
-					%li= link_to "About", root_path
-					%li= link_to "Contact", root_path
+					%li= link_to "About", pages_about_path
+					%li= link_to "Contact", pages_contact_path
 
 					
 				
@@ -42,11 +42,16 @@
 			/ /.navbar-collapse
 	/ /.container-fluid		
 
-	
-	.container	
+	- if pages_about_path || pages_contact_path
 		#notice-wrapper				
 			- flash.each do |name, msg|
 				= content_tag :div, msg, class: "alert alert-info"
 		= yield
+	- else
+		.container	
+			#notice-wrapper				
+				- flash.each do |name, msg|
+					= content_tag :div, msg, class: "alert alert-info"
+			= yield
 
 
