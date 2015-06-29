@@ -22,5 +22,13 @@ $(document).ready(function() {
 			$(this).remove();
 		});	
 	}, 1000);
-});
+
+	$(function() {
+		$( ".boxed" ).draggable();
+	});	
+
 	
+});
+
+
+

@@ -16,10 +16,16 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
 
 body {
-	background: rgba(0,0,0,0.9);
+  background-image: url("image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
@@ -43,6 +49,15 @@ nav {
 			}
 		}
 	}
+
+	a {
+		color: rgba(0,0,0,0.9);
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		display: inline-block;
+		margin-right: 30px;
+	}	
 
 	p {
 		margin: auto;
@@ -170,7 +185,7 @@ header {
 	margin-top: -20px;
 	height: 550px;
 	
-	background: url(image.png) center center;
+	background-image: url("https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=https%3A%2F%2Fhdwallpapers.cat%2Feiffel_tower_memory_souvenir_book_soft_cute_hd-wallpaper-1548333%2F&ei=kbKPVevsGse3uASTm4SICw&bvm=bv.96783405,d.c2E&psig=AFQjCNGrzhiOtjO45h9NlAcWJjknFIEJqg&ust=1435566707151347") center center;
 	background-size: cover;
 	
 	h1 {
@@ -205,4 +220,39 @@ header {
 		}
 
 	}
+}
+
+footer{
+
+	margin-top: 30px;
+	background: url(image.png) center center;
+	background-size: cover;
+
+	.lockup {
+		padding: 50px 30px;
+		
+		.content-wrap {
+		
+			float: right;
+			a{
+				color: rgba(0,0,0,0.7);
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				display: inline-block;
+				margin-left: 20px;
+			}	
+			.copyright {
+
+				font-size: 12px;
+				color: white;
+				margin: 0;
+				margin-left: 20px;
+				text-transform: uppercase;
+
+			}
+		}		
+			
+	}	
+
 }

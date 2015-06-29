@@ -53,5 +53,12 @@
 				- flash.each do |name, msg|
 					= content_tag :div, msg, class: "alert alert-info"
 			= yield
-
-
+	%footer
+		%div.lockup
+			%div.content-wrap
+				%div.links
+					= link_to "Home", root_path
+					= link_to "About", pages_about_path
+					= link_to "Contact", pages_contact_path 
+				%p.copyright	
+					All content copyright 2015.

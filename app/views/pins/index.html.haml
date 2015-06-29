@@ -1,25 +1,28 @@
-- if !user_signed_in?
-	%header.text-center
-		
-		%h1.other
-			%span PinTO
-		%p.subtext 
-			Your
-			%strong
-				%em PINS
-			are your
-			%strong 
-				%em VISIONS.
-
-		%p.subtext 
-			Show the world what you see and how you see it.
-			Express your thoughts to the world.
+%header.text-center
+	%h1.other
+		%span PinTO
+	%p.subtext 
+		Your
+		%strong
+			%em PINS
+		are your
+		%strong 
+			%em VISIONS.
+	%p.subtext 
+		Show the world what you see and how you see it.
+		Express your thoughts to the world.
+	- if !user_signed_in?
 		%p.subtext
 			So Sign-Up today and make your world as you want to see it.
-		= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-danger"	
-		
-	
-	
+		= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-danger"
+	- else
+		%p.subtext
+			Welcome back! Create a new 
+			%strong 
+				%em PIN.
+		= link_to "New Pin", new_pin_path, class: "btn btn-lg btn-danger"
+					
+
 #pins.transitions-enabled
 	- @pins.each do |pin|
 		.box.panel.panel-default
